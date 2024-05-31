@@ -1,8 +1,8 @@
-
+package com.pluralsight;
 import java.util.Scanner;
 
 public class SandwichOrder {
-    public static void main(String[] args) {
+    public SandwichOrder() {
         Scanner scanner = new Scanner(System.in);
 
         // Step 1: Choose bread
@@ -45,6 +45,7 @@ public class SandwichOrder {
         System.out.println("1. Steak");
         System.out.println("2. Ham");
         System.out.println("3. Salami");
+        
         System.out.println("4. Roast Beef");
         System.out.println("5. Chicken");
         System.out.println("6. Bacon");
@@ -69,6 +70,7 @@ public class SandwichOrder {
         boolean toasted = toastChoice.equalsIgnoreCase("yes");
 
         // Summary of the order
+
         StringBuilder orderSummary = new StringBuilder();
         orderSummary.append("You ordered a ").append(size).append(" ").append(bread).append(" sandwich");
         if (extrasBuilder.length() > 0) {
@@ -83,6 +85,5 @@ public class SandwichOrder {
         // Display order summary
         System.out.println(orderSummary.toString());
 
-        scanner.close();
     }
 }
